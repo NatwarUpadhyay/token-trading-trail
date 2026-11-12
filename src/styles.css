@@ -153,3 +153,39 @@
     color: var(--color-foreground);
   }
 }
+
+/* Trading terminal theme */
+@theme inline {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-gain: var(--gain);
+  --color-loss: var(--loss);
+}
+:root {
+  --radius: 0.4rem;
+  --background: oklch(0.16 0.012 250);
+  --foreground: oklch(0.93 0.01 250);
+  --card: oklch(0.2 0.014 250);
+  --card-foreground: oklch(0.93 0.01 250);
+  --popover: oklch(0.2 0.014 250);
+  --popover-foreground: oklch(0.93 0.01 250);
+  --primary: oklch(0.82 0.17 85);
+  --primary-foreground: oklch(0.18 0.02 85);
+  --secondary: oklch(0.26 0.015 250);
+  --secondary-foreground: oklch(0.9 0.01 250);
+  --muted: oklch(0.24 0.012 250);
+  --muted-foreground: oklch(0.65 0.02 250);
+  --accent: oklch(0.28 0.02 250);
+  --accent-foreground: oklch(0.95 0.01 250);
+  --destructive: oklch(0.63 0.21 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.3 0.015 250);
+  --input: oklch(0.3 0.015 250);
+  --ring: oklch(0.82 0.17 85);
+  --gain: oklch(0.76 0.17 150);
+  --loss: oklch(0.65 0.21 25);
+  --chart-1: oklch(0.82 0.17 85);
+  --chart-2: oklch(0.72 0.14 220);
+  --chart-3: oklch(0.76 0.17 150);
+}
+body { font-family: var(--font-sans); background: var(--background); color: var(--foreground); }

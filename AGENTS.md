@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- Trading logic (indicators, strategies, backtest, risk) lives in pure modules under `src/lib/trading/` so it can move server-side unchanged; UI never bypasses `checkOrder`.
+- Every order passes the deterministic risk layer; no AI call may place orders (advisory only), per the original agent's design.
+- Exchange keys must only ever live in server secrets; live trading needs two gates (server dry-run flag off + typed confirmation).
